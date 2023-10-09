@@ -119,7 +119,8 @@ requests==2.27.1
 requests-oauthlib==1.3.0
 rsa==4.7.2
 sacremoses==0.0.47
-scikit-learn==1.0.2
+scikit-learn==1.2.2
+scipy==1.10.1
 setuptools==52.0.0.post20210125
 sip==4.19.13
 six==1.16.0
