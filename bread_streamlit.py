@@ -28,12 +28,16 @@ from sklearn import metrics
 from tensorflow.keras.regularizers import l1, l2, l1_l2
 
 st.header('Artificial Intelligence Prediction of Bread Qualities (Texture)')
+st.write('made by Korea Food Research Institute and Sejong Univ.')
+st.write(' ')
+st.write('(밀가루 Mixolab 특성을 토대로 다층 퍼셉트론 모델로 구축되었으며, 예측 정확도는 R2 > 0.8 입니다)')
 
 uploaded_file = st.file_uploader("Choose an excel file", type="xlsx")
 
 if uploaded_file:
     df1 = pd.read_excel(uploaded_file)
 
+    st.write('[입력 데이터] ')
     st.dataframe(df1)
                
     df_train = pd.read_excel("KFRI-108-copy.xlsx", header = 0)
@@ -54,8 +58,20 @@ if uploaded_file:
     
     new_normal[0][30] = result[0]
     pred = scaler.inverse_transform(new_normal)
-    
+
+    st.write(' ')
+    st.write('[결과] ')
     st.write('예측되는 빵의 텍스처 (hardness): ', round(pred[0][30], 2), ' N')
+    st.write(' ')
+    
+
+    
+
+
+# In[2]:
+
+
+#pip list --format=freeze > requirements.txt
 
 
 # In[ ]:
