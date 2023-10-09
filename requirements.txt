@@ -77,7 +77,7 @@ numexpr==2.8.1
 numpy==1.21.5
 oauthlib==3.2.0
 olefile==0.46
-openpyxl==3.0.9
+openpyxl==3.0.10
 opt-einsum==3.3.0
 packaging==21.3
 pandas==1.4.1
