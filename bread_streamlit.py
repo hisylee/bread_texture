@@ -50,10 +50,13 @@ if uploaded_file is not None:
 
     y_pred = model.predict(X_input)
 
-    X_scaled[0, -1] = y_pred[0]
-    X_inverse = scaler.inverse_transform(X_scaled)
+    #X_scaled[0, -1] = y_pred[0]
+    #X_inverse = scaler.inverse_transform(X_scaled)
 
-    st.success(f"예측 Hardness: {X_inverse[0, -1]:.2f} N")
+    st.success(f"예측 Hardness: {y_pred} N")
+
+
+#    st.success(f"예측 Hardness: {X_inverse[0, -1]:.2f} N")
     
 
     
